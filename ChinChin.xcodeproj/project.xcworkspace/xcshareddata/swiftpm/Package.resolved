@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "collectionviewpaginglayout",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/amirdew/CollectionViewPagingLayout.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "5b40724af52b4d80f4b5d90a41f1aab8476be4f9"
+      }
+    },
+    {
+      "identity" : "lottie-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/airbnb/lottie-ios.git",
+      "state" : {
+        "revision" : "d6feea26a370019b4d3a85f5984cb95a2734776f",
+        "version" : "4.2.0"
+      }
+    },
+    {
+      "identity" : "snappable",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hugehoge/Snappable",
+      "state" : {
+        "branch" : "main",
+        "revision" : "806de8123c87fdd818f1b8998a56417a1a510007"
+      }
+    }
+  ],
+  "version" : 2
+}

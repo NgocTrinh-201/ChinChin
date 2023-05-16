@@ -7,18 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D35955D2A0FCC2B0093C89D /* TimelessWalletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D35955C2A0FCC2B0093C89D /* TimelessWalletApp.swift */; };
+		5D35955F2A0FCCB60093C89D /* OnboardingSplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D35955E2A0FCCB60093C89D /* OnboardingSplashScreenView.swift */; };
+		5D3595662A0FDD5F0093C89D /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3595652A0FDD5F0093C89D /* SignUpView.swift */; };
+		5D3595692A0FF6AD0093C89D /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 5D3595682A0FF6AD0093C89D /* Lottie */; };
+		5D35956B2A0FF6FF0093C89D /* circle-loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D35956A2A0FF6FF0093C89D /* circle-loading.json */; };
+		5D5B27B82A12922500EA6BC9 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B27B72A12922500EA6BC9 /* SettingsView.swift */; };
+		5D5E4C942A0E923700290672 /* Phosphate.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 5D71B7DC2A0B90A700BE8DA7 /* Phosphate.ttc */; };
+		5D71B7D72A0B8E6F00BE8DA7 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E984FC32A0B5830007EE865 /* SFProDisplay-Bold.ttf */; };
 		5D7E35AF2A0A84C700AB3BE9 /* ChinChinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7E35AE2A0A84C700AB3BE9 /* ChinChinApp.swift */; };
-		5D7E35B12A0A84C700AB3BE9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7E35B02A0A84C700AB3BE9 /* ContentView.swift */; };
 		5D7E35B32A0A84CB00AB3BE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D7E35B22A0A84CB00AB3BE9 /* Assets.xcassets */; };
 		5D7E35B62A0A84CB00AB3BE9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D7E35B52A0A84CB00AB3BE9 /* Preview Assets.xcassets */; };
+		5D7E35BD2A0A8B7200AB3BE9 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7E35BC2A0A8B7200AB3BE9 /* SwiftUIView.swift */; };
+		5D7E929F2A10BA7600069E06 /* confirmation-loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D7E929E2A10BA7600069E06 /* confirmation-loading.json */; };
+		5D7E92A22A10BE3600069E06 /* WelcomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7E92A12A10BE3600069E06 /* WelcomView.swift */; };
+		5D7E92A92A10DBE100069E06 /* Snappable in Frameworks */ = {isa = PBXBuildFile; productRef = 5D7E92A82A10DBE100069E06 /* Snappable */; };
+		5D7E92AC2A10E03E00069E06 /* CollectionViewPagingLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 5D7E92AB2A10E03E00069E06 /* CollectionViewPagingLayout */; };
+		5D7E92AF2A10EAC700069E06 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7E92AE2A10EAC700069E06 /* WalletView.swift */; };
+		5D8EF6A12A1124630000B894 /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8EF6A02A1124630000B894 /* DiscoverView.swift */; };
+		5D8EF6A32A1125900000B894 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8EF6A22A1125900000B894 /* NavigationBar.swift */; };
+		5D8EF6A52A1131ED0000B894 /* TimelessOGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8EF6A42A1131ED0000B894 /* TimelessOGView.swift */; };
+		8E0611D02A11D13500AE7B20 /* splash (video-converter.com).mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8E0611CF2A11D13500AE7B20 /* splash (video-converter.com).mp4 */; };
+		8E0611D22A11D1CE00AE7B20 /* walkthroughIntro (video-converter.com).mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8E0611D12A11D1CE00AE7B20 /* walkthroughIntro (video-converter.com).mp4 */; };
+		8E0611D42A11D62400AE7B20 /* Discover.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E0611D32A11D62400AE7B20 /* Discover.json */; };
+		8E0611D62A11D6B300AE7B20 /* overViewLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E0611D52A11D6B300AE7B20 /* overViewLottie.json */; };
+		8E0611D82A11D7C000AE7B20 /* 77631-bee-lounging.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8E0611D72A11D7C000AE7B20 /* 77631-bee-lounging.mp4 */; };
+		8E984FBA2A0B4D18007EE865 /* dna3_dance.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8E984FB92A0B4D00007EE865 /* dna3_dance.mp4 */; };
+		8E984FC72A0B8456007EE865 /* giphy360p.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8E984FC92A0B8456007EE865 /* giphy360p.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D35955C2A0FCC2B0093C89D /* TimelessWalletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelessWalletApp.swift; sourceTree = "<group>"; };
+		5D35955E2A0FCCB60093C89D /* OnboardingSplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSplashScreenView.swift; sourceTree = "<group>"; };
+		5D3595652A0FDD5F0093C89D /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		5D35956A2A0FF6FF0093C89D /* circle-loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "circle-loading.json"; sourceTree = "<group>"; };
+		5D5B27B72A12922500EA6BC9 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		5D71B7DC2A0B90A700BE8DA7 /* Phosphate.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phosphate.ttc; sourceTree = "<group>"; };
 		5D7E35AB2A0A84C700AB3BE9 /* ChinChin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChinChin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D7E35AE2A0A84C700AB3BE9 /* ChinChinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChinChinApp.swift; sourceTree = "<group>"; };
-		5D7E35B02A0A84C700AB3BE9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5D7E35B22A0A84CB00AB3BE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D7E35B52A0A84CB00AB3BE9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5D7E35BC2A0A8B7200AB3BE9 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		5D7E929E2A10BA7600069E06 /* confirmation-loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "confirmation-loading.json"; sourceTree = "<group>"; };
+		5D7E92A12A10BE3600069E06 /* WelcomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomView.swift; sourceTree = "<group>"; };
+		5D7E92AE2A10EAC700069E06 /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
+		5D8EF6A02A1124630000B894 /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
+		5D8EF6A22A1125900000B894 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		5D8EF6A42A1131ED0000B894 /* TimelessOGView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelessOGView.swift; sourceTree = "<group>"; };
+		8E0611CF2A11D13500AE7B20 /* splash (video-converter.com).mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "splash (video-converter.com).mp4"; sourceTree = "<group>"; };
+		8E0611D12A11D1CE00AE7B20 /* walkthroughIntro (video-converter.com).mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "walkthroughIntro (video-converter.com).mp4"; sourceTree = "<group>"; };
+		8E0611D32A11D62400AE7B20 /* Discover.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Discover.json; sourceTree = "<group>"; };
+		8E0611D52A11D6B300AE7B20 /* overViewLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = overViewLottie.json; sourceTree = "<group>"; };
+		8E0611D72A11D7C000AE7B20 /* 77631-bee-lounging.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "77631-bee-lounging.mp4"; sourceTree = "<group>"; };
+		8E984FB92A0B4D00007EE865 /* dna3_dance.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = dna3_dance.mp4; sourceTree = "<group>"; };
+		8E984FC32A0B5830007EE865 /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
+		8E984FC42A0B58C1007EE865 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8E984FC82A0B8456007EE865 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = Base.lproj/giphy360p.mp4; sourceTree = "<group>"; };
+		8E984FCA2A0B84B9007EE865 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/giphy360p.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,12 +71,102 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D3595692A0FF6AD0093C89D /* Lottie in Frameworks */,
+				5D7E92A92A10DBE100069E06 /* Snappable in Frameworks */,
+				5D7E92AC2A10E03E00069E06 /* CollectionViewPagingLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D3595582A0FCB590093C89D /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				8E0611D72A11D7C000AE7B20 /* 77631-bee-lounging.mp4 */,
+				8E0611D12A11D1CE00AE7B20 /* walkthroughIntro (video-converter.com).mp4 */,
+				8E0611CF2A11D13500AE7B20 /* splash (video-converter.com).mp4 */,
+				8E984FB92A0B4D00007EE865 /* dna3_dance.mp4 */,
+				8E984FC92A0B8456007EE865 /* giphy360p.mp4 */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		5D35955A2A0FCB7C0093C89D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8E984FC32A0B5830007EE865 /* SFProDisplay-Bold.ttf */,
+				5D71B7DC2A0B90A700BE8DA7 /* Phosphate.ttc */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5D35955B2A0FCB950093C89D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5D35956D2A0FF7230093C89D /* Lottie */,
+				5D35955A2A0FCB7C0093C89D /* Fonts */,
+				5D3595582A0FCB590093C89D /* Video */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5D3595612A0FCDBD0093C89D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5D35955C2A0FCC2B0093C89D /* TimelessWalletApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5D3595622A0FCDDE0093C89D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				5D5B27B62A12920400EA6BC9 /* Settings */,
+				5D8EF69F2A1124490000B894 /* Discover */,
+				5D7E92AD2A10EAB600069E06 /* Wallet */,
+				5D7E92A02A10BE2100069E06 /* Welcom */,
+				5D3595642A0FDD450093C89D /* SignUp */,
+				5D3595632A0FDD2B0093C89D /* OnboardingSplash */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		5D3595632A0FDD2B0093C89D /* OnboardingSplash */ = {
+			isa = PBXGroup;
+			children = (
+				5D35955E2A0FCCB60093C89D /* OnboardingSplashScreenView.swift */,
+			);
+			path = OnboardingSplash;
+			sourceTree = "<group>";
+		};
+		5D3595642A0FDD450093C89D /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				5D3595652A0FDD5F0093C89D /* SignUpView.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		5D35956D2A0FF7230093C89D /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				8E0611D52A11D6B300AE7B20 /* overViewLottie.json */,
+				8E0611D32A11D62400AE7B20 /* Discover.json */,
+				5D7E929E2A10BA7600069E06 /* confirmation-loading.json */,
+				5D35956A2A0FF6FF0093C89D /* circle-loading.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		5D5B27B62A12920400EA6BC9 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				5D5B27B72A12922500EA6BC9 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		5D7E35A22A0A84C700AB3BE9 = {
 			isa = PBXGroup;
 			children = (
@@ -51,10 +186,14 @@
 		5D7E35AD2A0A84C700AB3BE9 /* ChinChin */ = {
 			isa = PBXGroup;
 			children = (
+				5D3595622A0FCDDE0093C89D /* Scenes */,
+				5D3595612A0FCDBD0093C89D /* App */,
+				5D35955B2A0FCB950093C89D /* Resources */,
+				8E984FC42A0B58C1007EE865 /* Info.plist */,
 				5D7E35AE2A0A84C700AB3BE9 /* ChinChinApp.swift */,
-				5D7E35B02A0A84C700AB3BE9 /* ContentView.swift */,
 				5D7E35B22A0A84CB00AB3BE9 /* Assets.xcassets */,
 				5D7E35B42A0A84CB00AB3BE9 /* Preview Content */,
+				5D7E35BC2A0A8B7200AB3BE9 /* SwiftUIView.swift */,
 			);
 			path = ChinChin;
 			sourceTree = "<group>";
@@ -67,6 +206,32 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		5D7E92A02A10BE2100069E06 /* Welcom */ = {
+			isa = PBXGroup;
+			children = (
+				5D7E92A12A10BE3600069E06 /* WelcomView.swift */,
+			);
+			path = Welcom;
+			sourceTree = "<group>";
+		};
+		5D7E92AD2A10EAB600069E06 /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				5D7E92AE2A10EAC700069E06 /* WalletView.swift */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
+		5D8EF69F2A1124490000B894 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				5D8EF6A02A1124630000B894 /* DiscoverView.swift */,
+				5D8EF6A22A1125900000B894 /* NavigationBar.swift */,
+				5D8EF6A42A1131ED0000B894 /* TimelessOGView.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,12 +242,18 @@
 				5D7E35A72A0A84C700AB3BE9 /* Sources */,
 				5D7E35A82A0A84C700AB3BE9 /* Frameworks */,
 				5D7E35A92A0A84C700AB3BE9 /* Resources */,
+				8E0611D92A120F1D00AE7B20 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = ChinChin;
+			packageProductDependencies = (
+				5D3595682A0FF6AD0093C89D /* Lottie */,
+				5D7E92A82A10DBE100069E06 /* Snappable */,
+				5D7E92AB2A10E03E00069E06 /* CollectionViewPagingLayout */,
+			);
 			productName = ChinChin;
 			productReference = 5D7E35AB2A0A84C700AB3BE9 /* ChinChin.app */;
 			productType = "com.apple.product-type.application";
@@ -94,6 +265,9 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
@@ -111,6 +285,11 @@
 				Base,
 			);
 			mainGroup = 5D7E35A22A0A84C700AB3BE9;
+			packageReferences = (
+				5D3595672A0FF6AD0093C89D /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				5D7E92A72A10DBE100069E06 /* XCRemoteSwiftPackageReference "Snappable" */,
+				5D7E92AA2A10E03E00069E06 /* XCRemoteSwiftPackageReference "CollectionViewPagingLayout" */,
+			);
 			productRefGroup = 5D7E35AC2A0A84C700AB3BE9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,24 +304,76 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E0611D82A11D7C000AE7B20 /* 77631-bee-lounging.mp4 in Resources */,
+				5D5E4C942A0E923700290672 /* Phosphate.ttc in Resources */,
+				8E0611D22A11D1CE00AE7B20 /* walkthroughIntro (video-converter.com).mp4 in Resources */,
+				5D7E929F2A10BA7600069E06 /* confirmation-loading.json in Resources */,
+				8E0611D62A11D6B300AE7B20 /* overViewLottie.json in Resources */,
+				5D71B7D72A0B8E6F00BE8DA7 /* SFProDisplay-Bold.ttf in Resources */,
+				8E984FBA2A0B4D18007EE865 /* dna3_dance.mp4 in Resources */,
+				5D35956B2A0FF6FF0093C89D /* circle-loading.json in Resources */,
+				8E0611D42A11D62400AE7B20 /* Discover.json in Resources */,
+				8E0611D02A11D13500AE7B20 /* splash (video-converter.com).mp4 in Resources */,
 				5D7E35B62A0A84CB00AB3BE9 /* Preview Assets.xcassets in Resources */,
+				8E984FC72A0B8456007EE865 /* giphy360p.mp4 in Resources */,
 				5D7E35B32A0A84CB00AB3BE9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8E0611D92A120F1D00AE7B20 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5D7E35A72A0A84C700AB3BE9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D7E35B12A0A84C700AB3BE9 /* ContentView.swift in Sources */,
+				5D35955D2A0FCC2B0093C89D /* TimelessWalletApp.swift in Sources */,
+				5D8EF6A52A1131ED0000B894 /* TimelessOGView.swift in Sources */,
+				5D7E92AF2A10EAC700069E06 /* WalletView.swift in Sources */,
+				5D35955F2A0FCCB60093C89D /* OnboardingSplashScreenView.swift in Sources */,
+				5D3595662A0FDD5F0093C89D /* SignUpView.swift in Sources */,
+				5D8EF6A32A1125900000B894 /* NavigationBar.swift in Sources */,
+				5D7E92A22A10BE3600069E06 /* WelcomView.swift in Sources */,
+				5D8EF6A12A1124630000B894 /* DiscoverView.swift in Sources */,
 				5D7E35AF2A0A84C700AB3BE9 /* ChinChinApp.swift in Sources */,
+				5D7E35BD2A0A8B7200AB3BE9 /* SwiftUIView.swift in Sources */,
+				5D5B27B82A12922500EA6BC9 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8E984FC92A0B8456007EE865 /* giphy360p.mp4 */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E984FC82A0B8456007EE865 /* Base */,
+				8E984FCA2A0B84B9007EE865 /* en */,
+			);
+			name = giphy360p.mp4;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5D7E35B72A0A84CB00AB3BE9 /* Debug */ = {
@@ -267,9 +498,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ChinChin/Preview Content\"";
+				DEVELOPMENT_TEAM = 72P82X8MK6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = ChinChin/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -295,9 +529,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ChinChin/Preview Content\"";
+				DEVELOPMENT_TEAM = 72P82X8MK6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = ChinChin/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -337,6 +574,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5D3595672A0FF6AD0093C89D /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		5D7E92A72A10DBE100069E06 /* XCRemoteSwiftPackageReference "Snappable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hugehoge/Snappable";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		5D7E92AA2A10E03E00069E06 /* XCRemoteSwiftPackageReference "CollectionViewPagingLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/amirdew/CollectionViewPagingLayout.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5D3595682A0FF6AD0093C89D /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D3595672A0FF6AD0093C89D /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		5D7E92A82A10DBE100069E06 /* Snappable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D7E92A72A10DBE100069E06 /* XCRemoteSwiftPackageReference "Snappable" */;
+			productName = Snappable;
+		};
+		5D7E92AB2A10E03E00069E06 /* CollectionViewPagingLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D7E92AA2A10E03E00069E06 /* XCRemoteSwiftPackageReference "CollectionViewPagingLayout" */;
+			productName = CollectionViewPagingLayout;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5D7E35A32A0A84C700AB3BE9 /* Project object */;
 }
