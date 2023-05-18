@@ -31,6 +31,7 @@ extension NavigationBar {
                     .onTapGesture {
                         cuuture = 1
                     }
+                    
                 Spacer()
                 item(img: "bubble.left.and.bubble.right.fill", text: "Chat")
                     .onTapGesture {
