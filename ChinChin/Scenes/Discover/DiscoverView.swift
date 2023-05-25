@@ -11,7 +11,7 @@ import AVKit
 struct DiscoverView: View {
 }
 let itemConten = [
-    Item(img: "77631-bee-lounging", text: ["Ong là loài côn trùng có tổ chức xã hội cao như kiến, mối. Ong sống theo đàn, mỗi đàn đều có ong chúa, ong thợ, ong non... "]),
+    Item(img: "TimelessOGNFT (video-converter.com)", text: ["Ong là loài côn trùng có tổ chức xã hội cao như kiến, mối. Ong sống theo đàn, mỗi đàn đều có ong chúa, ong thợ, ong non... "]),
     Item(img: "habit", text: ["Dang cap thu cung", "Con tho giang ho"]),
     Item(img: "Image2", text: ["You do it2", "You do it6", "You do it5"]),
     Item(img: "Image", text: ["You do it4", "You do it8"])
@@ -86,7 +86,7 @@ extension DiscoverView {
             }
             .frame(maxWidth: .infinity)
             .frame(height: UIScreen.main.bounds.height * 0.1)
-            .background(Color("Color1"))
+            .background(Color("Color1")).opacity(0.5)
         }
 //        .overlay(alignment: .bottom) {
 //            VStack {

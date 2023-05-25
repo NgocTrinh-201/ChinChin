@@ -8,11 +8,13 @@
 import SwiftUI
 import AVKit
 import UIKit
+import AVFoundation
 
 struct SplashPlayer: UIViewControllerRepresentable {
     typealias UIViewControllerType = AVPlayerViewController
     var player: AVPlayer
     var isPlaying: Bool
+    var isLoop = false
     var willStopSplash = false
     var viewController = UIViewControllerType()
 
@@ -34,6 +36,10 @@ struct SplashPlayer: UIViewControllerRepresentable {
         viewController.view.backgroundColor = .clear
         viewController.showsPlaybackControls = false
         viewController.entersFullScreenWhenPlaybackBegins = true
+        viewController.exitsFullScreenWhenPlaybackEnds = !isLoop
+        
+       
+        
         return viewController
     }
 

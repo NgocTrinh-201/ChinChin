@@ -5,6 +5,8 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Phosphate.ttc</string>
+		<string>SFProText-Medium.ttf</string>
+		<string>SFProDisplay-Black.ttf</string>
 		<string>SFProDisplay-Bold.ttf</string>
 	</array>
 </dict>

@@ -8,6 +8,8 @@
 import SwiftUI
 import CollectionViewPagingLayout
 import LocalAuthentication
+import UIKit
+import WebKit
 
 struct Step: Identifiable {
     let id: Int
@@ -37,7 +39,7 @@ extension WalletView {
                     .scaleEffect(0.8)
                 case 1: DiscoverView()
                         .scaleEffect(0.8)
-                default : OnboardingSplashScreenView()
+                default: OnboardingSplashScreenView()
                         .scaleEffect(0.8)
                 }
             }
@@ -92,19 +94,13 @@ extension WalletView {
             }
         }
         .sheet(isPresented: $isShowingModal) {
-            VStack {
-                Spacer()
-                Spacer()
-                    .frame(maxWidth: .infinity, maxHeight: 500)
-                    .background(.red)
+            let randomvalue = Int.random(in: 0...4)
+            switch randomvalue {
+            case 1: TransactionView(isShowing: $isShowingModal, type: .safeTransaction)
+            case 2: TransactionView(isShowing: $isShowingModal, type: .criticalWarmning)
+            case 3: TransactionView(isShowing: $isShowingModal, type: .transactionWarmning)
+            default: TransactionView(isShowing: $isShowingModal, type: .transactionFlagged)
             }
-//            let randomvalue = Int.random(in: 0...4)
-//            switch randomvalue {
-//            case 1: TransactionView(isShowing: $isShowingModal, type: .safeTransaction)
-//            case 2: TransactionView(isShowing: $isShowingModal, type: .criticalWarmning)
-//            case 3: TransactionView(isShowing: $isShowingModal, type: .transactionWarmning)
-//            default : TransactionView(isShowing: $isShowingModal, type: .transactionFlagged)
-//            }
         }
     }
 }
@@ -134,7 +130,6 @@ extension WalletView {
                 .aspectRatio(2, contentMode: .fill)
                 .frame(width: UIScreen.main.bounds.width * 0.5)
                 .frame(height: UIScreen.main.bounds.height * 0.1)
-                
             Text("Go ahead we a family ")
                 .font(.sfProDisplayBold(size: 20))
                 .foregroundColor(.white)
@@ -191,7 +186,7 @@ extension WalletView {
                     isShowingModal.toggle()
                 }
             Spacer()
-            incador(img: "scribble", text: "Exchange")
+            incador(img: "arrow.triangle.swap", text: "Exchange")
             Spacer()
         }
     }
@@ -199,13 +194,12 @@ extension WalletView {
 extension WalletView {
     private func mainImg(img: String, text: String) -> some View {
         VStack {
-           
-            
                 VStack(alignment: .leading) {
                     HStack {
                         Text(text)
                             .fontWeight(.bold)
                             .foregroundColor(.white)
+                            
                         Image("checkmark.seal.fill.blue")
                             .resizable()
                             .frame(width: 30, height: 30)
@@ -216,13 +210,12 @@ extension WalletView {
                                 showSheet.toggle()
                             }
                     }
+                    .padding(.top, 20)
                     Spacer()
                       Text("$-----")
                           .foregroundColor(.white)
                 }
             .padding()
-          //  .frame(maxWidth:.infinity)
-            .background(.red)
             Image(img)
                 .resizable()
                 .scaledToFit()
@@ -232,8 +225,8 @@ extension WalletView {
             Spacer()
         }
        .frame(height: UIScreen.main.bounds.height * 0.5 )
-        .background(Color("Color1"))
-        .cornerRadius(15)
+       .background(Color("Color1"))
+       .cornerRadius(15)
     }
 }
 extension WalletView {
@@ -261,11 +254,11 @@ struct WalletView_Previews: PreviewProvider {
 
 struct TransactionView: View {
     @Binding var isShowing: Bool
+    @State var isShowWeb = false
     let type: TransactionViewType
     var body: some View {
         VStack {
             VStack {
-                //
                 HStack(spacing: 20) {
                     Image("qr_finder_icon")
                         .resizable()
@@ -278,12 +271,21 @@ struct TransactionView: View {
                         .resizable()
                         .frame(width: 25, height: 25)
                 }
-                criticalWarmningText
-                    .foregroundColor(.white)
-                    .font(.custom("", size: 15))
-                    .lineLimit(5)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .padding(.vertical, 20)
+                ZStack {
+                    switch type {
+                    case .criticalWarmning:  criticalWarmningText
+                    case .safeTransaction: Text("")
+                    case .transactionWarmning:
+                         warmningText
+                    case .transactionFlagged:
+                         flaggedtext
+                    }
+                }
+                .foregroundColor(.white)
+                .font(.custom("", size: 15))
+                .lineLimit(5)
+                .fixedSize(horizontal: false, vertical: true)
+                .padding(.vertical, 20)
                 if (type != TransactionViewType.transactionFlagged) {
                     VStack(alignment: .leading, spacing: 20) {
                         Text("To Address")
@@ -305,58 +307,47 @@ struct TransactionView: View {
                     .cornerRadius(15)
                     VStack(alignment: .leading, spacing: 15) {
                         VStack(alignment: .leading, spacing: 5) {
-                            Text("Simulation Results")
-                                .font(.custom("", size: 14))
-                                .foregroundColor(.white.opacity(0.5))
-                            Text("Approve tranfer all your DAI")
-                                .font(.custom("", size: 18))
-                                .foregroundColor(.pink.opacity(0.5))
-                        }
-                        line
-                        VStack(alignment: .leading, spacing: 5) {
-                            Text("Send")
-                                .font(.custom("", size: 14))
-                                .foregroundColor(.white.opacity(0.5))
-                            HStack(spacing: 15) {
-                                Image("checkmark.seal.fill.blue")
-                                    .resizable()
-                                    .frame(width: 20, height: 20)
-                                    .mask(Circle())
-                                Text("25 ETH")
-                                    .font(.custom("", size: 18))
-                                    .foregroundColor(.white)
-                            }
-                        }
-                        line
-                        VStack(alignment: .leading, spacing: 5) {
-                            Text("Recive")
-                                .font(.custom("", size: 14))
-                                .foregroundColor(.white.opacity(0.5))
-                            HStack(spacing: 15) {
-                                Image("checkmark.seal.fill.blue")
-                                    .resizable()
-                                    .frame(width: 20, height: 20)
-                                    .mask(Circle())
-                                Text("25 ETH")
-                                    .font(.custom("", size: 18))
-                                    .foregroundColor(.white)
-                            }
-                        }
-                        line
-                        HStack {
-                            VStack(alignment: .leading, spacing: 5) {
-                                Text("Requested by")
-                                    .font(.custom("", size: 14))
-                                    .foregroundColor(.white.opacity(0.5))
-                                Text("app.uniswap.org")
+                            label("Simulation Results")
+                            if type != .safeTransaction {
+                                Text("Approve tranfer all your DAI")
                                     .font(.custom("", size: 18))
                                     .foregroundColor(.pink.opacity(0.5))
                             }
-                            Spacer()
-                            Image("cqr_finder_icon")
-                                .resizable()
-                                .frame(width: 20, height: 20)
-                                .mask(Circle())
+                        }
+                        VStack(alignment: .leading, spacing: 5) {
+                            label("Send")
+                            coinDisplay()
+                        }
+                        line
+                        VStack(alignment: .leading, spacing: 5) {
+                            label("Recive")
+                            coinDisplay()
+                        }
+                        line
+                        if (type != .transactionWarmning) {
+                            HStack {
+                                VStack(alignment: .leading, spacing: 5) {
+                                    label("Requested by")
+                                    Text("app.uniswap.org")
+                                        .font(.custom("", size: 18))
+                                        .foregroundColor(.pink.opacity(0.5))
+                                }
+                                .onTapGesture {
+                                    isShowWeb.toggle()
+                                }
+                                Spacer()
+                                Image("qr_finder_icon")
+                                    .resizable()
+                                    .frame(width: 20, height: 20)
+                                    .mask(Circle())
+                            }
+                        } else {
+                            VStack(alignment: .leading, spacing: 5) {
+                                label("Estimated free")
+                                Text("0.00001 ETH")
+                                    .font(.custom("", size: 18))
+                                    .foregroundColor(.white)
+                            }
                         }
                     }
                     .padding()
@@ -373,24 +364,56 @@ struct TransactionView: View {
             Button {
                 buttonActionHandle()
             } label: {
-                Text(getButtonText())
-                    .foregroundColor(.white)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(.gray.opacity(0.5))
-                    .cornerRadius(25)
-                    .padding(.horizontal, 20)
+                HStack(spacing: 10) {
+                    if let icon = getButtonIcon() {
+                        Image(icon)
+                            .resizable()
+                            .frame(width: 20, height: 20)
+                            .mask(Circle())
+                    }
+                    Text(getButtonText())
+                        .foregroundColor(.white)
+                }
             }
+            .padding()
+            .frame(maxWidth: .infinity)
+            .background(.gray.opacity(0.5))
+            .cornerRadius(25)
+            .padding(.horizontal, 20)
         }
         .padding()
         .background(getBacgroundColor())
+        .sheet(isPresented: $isShowWeb) {
+            WebView()
+        }
     }
+    
+    func label(_ string: String) -> some View {
+        Text(string)
+            .font(.custom("", size: 14))
+            .foregroundColor(.white.opacity(0.5))
+    }
+    
+    func coinDisplay() -> some View {
+        HStack(spacing: 15) {
+            Image("checkmark.seal.fill.blue")
+                .resizable()
+                .frame(width: 20, height: 20)
+                .mask(Circle())
+            Text("25 ETH")
+                .font(.custom("", size: 18))
+                .foregroundColor(.white)
+                
+        }
+    }
+    
     var line: some View {
         Spacer()
             .frame(height: 0.2)
             .frame(maxWidth: .infinity)
             .background(.white)
     }
+    
     var criticalWarmningText: some View {
         Text("We believe this transaction is ") +
         Text("malicious")
@@ -399,6 +422,20 @@ struct TransactionView: View {
         Text("unsafe").foregroundColor(.pink.opacity(0.5)) +
         Text("to sign. Approving may lead to ") + Text("loss of funds").foregroundColor(.pink.opacity(0.5)) +
         Text(" .")
+    }
+    
+    var warmningText: some View {
+            Text("You are allowing dapp to ") +
+            Text("withdraw funds")
+                .foregroundColor(.pink.opacity(0.5)) +
+            Text(" from your account in the ") +
+            Text("future").foregroundColor(.pink.opacity(0.5)) +
+            Text(". Review and ensure this authorized. ") + Text("DYOR").foregroundColor(.pink.opacity(0.5)) +
+            Text(" .")
+        }
+    
+    var flaggedtext: some View {
+        Text("Time belive this transaction is malicious to sign. ")
     }
     func getBacgroundColor() -> Color {
         switch type {
@@ -411,6 +448,7 @@ struct TransactionView: View {
             return Color("backgroundColor4")
         }
     }
+
     func getTitle() -> String {
         switch type {
         case .criticalWarmning: return "Critical Warming"
@@ -422,6 +460,7 @@ struct TransactionView: View {
             return "Transaction Flagged"
         }
     }
+    
     func getButtonText() -> String {
         switch type {
         case .criticalWarmning: return "Proceed with warmning"
@@ -433,6 +472,20 @@ struct TransactionView: View {
             return "Close"
         }
     }
+    
+    func getButtonIcon() -> String? {
+        switch type {
+        case .safeTransaction:
+            return "qr_finder_icon"
+        case .criticalWarmning:
+            return "qr_finder_icon"
+        case .transactionWarmning:
+            return "qr_finder_icon"
+        case .transactionFlagged:
+            return nil
+        }
+    }
+    
     func buttonActionHandle() {
         switch type {
         case .criticalWarmning: biometric(); break;
@@ -442,26 +495,29 @@ struct TransactionView: View {
             isShowing.toggle()
         }
     }
+    
     func biometric() {
         print("Biometric")
         let context = LAContext()
-            var error: NSError?
-            if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-                let reason = "Identify yourself!"
-                context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) {
-                    success, authenticationError in
-                    DispatchQueue.main.async {
-                        if success {
-                            print("Sucessful")
-                        } else {
-                            print("Failure")
-                        }
-                        isShowing.toggle()
+        var error: NSError?
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            let reason = "Identify yourself!"
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) {
+                success, authenticationError in
+                DispatchQueue.main.async {
+                    if success {
+                        print("Sucessful")
+                    } else {
+                        print("Failure")
                     }
+                    isShowing.toggle()
                 }
-            } else {
-                print("No biometric")
             }
+        } else {
+            print("No biometric")
+                
+        }
+            
     }
 }
 
@@ -470,4 +526,39 @@ enum TransactionViewType {
     case criticalWarmning
     case transactionWarmning
     case transactionFlagged
+}
+
+class WebViewController: UIViewController {
+    let url: String = "https://app.uniswap.org"
+    let webView: WKWebView = {
+        let preferences = WKWebpagePreferences()
+        preferences.allowsContentJavaScript = true
+        let configuration = WKWebViewConfiguration()
+        configuration.defaultWebpagePreferences = preferences
+        let view = WKWebView(frame: .zero, configuration: configuration)
+        return view
+    }()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.addSubview(webView)
+        guard let url = URL(string: url) else {
+            return
+        }
+        webView.load(URLRequest(url: url))
+        webView.customUserAgent = "iPad/Chrome/SomethingRandom"
+    }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        webView.frame = view.bounds
+    }
+}
+
+struct WebView: UIViewControllerRepresentable {
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+        print("Upfate view")
+    }
+    func makeUIViewController(context: Context) -> some UIViewController {
+        let viewC = WebViewController()
+        return viewC
+    }
 }

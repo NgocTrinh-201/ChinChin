@@ -90,6 +90,8 @@ extension Font {
     public enum Name {
         public static let sfProDisplayBold = "SFProDisplay-Bold"
         public static let Phosphate = "Phosphate"
+        public static let SFProDisplay = "SFProDisplay-Black"
+        public static let SFProTextMedium = "SFProText-Medium"
     }
 }
 public extension Font {
@@ -98,6 +100,12 @@ public extension Font {
     }
     static func phosphate(size: CGFloat) -> Font {
         return Font.custom(Name.Phosphate, size: size)
+    }
+    static func SFProDisplay(size: CGFloat) -> Font {
+        return Font.custom(Name.SFProDisplay, size: size)
+    }
+    static func SFProTextMedium(size: CGFloat) -> Font {
+        return Font.custom(Name.SFProTextMedium, size: size)
     }
 }
 
