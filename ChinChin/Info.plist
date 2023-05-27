@@ -9,5 +9,9 @@
 		<string>SFProDisplay-Black.ttf</string>
 		<string>SFProDisplay-Bold.ttf</string>
 	</array>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>

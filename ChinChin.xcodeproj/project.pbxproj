@@ -15,6 +15,7 @@
 		5D5B27B82A12922500EA6BC9 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B27B72A12922500EA6BC9 /* SettingsView.swift */; };
 		5D5E4C942A0E923700290672 /* Phosphate.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 5D71B7DC2A0B90A700BE8DA7 /* Phosphate.ttc */; };
 		5D71B7D72A0B8E6F00BE8DA7 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E984FC32A0B5830007EE865 /* SFProDisplay-Bold.ttf */; };
+		5D7D881D2A21DD4E002EB03D /* WalletActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7D881C2A21DD4E002EB03D /* WalletActivities.swift */; };
 		5D7E35AF2A0A84C700AB3BE9 /* ChinChinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7E35AE2A0A84C700AB3BE9 /* ChinChinApp.swift */; };
 		5D7E35B32A0A84CB00AB3BE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D7E35B22A0A84CB00AB3BE9 /* Assets.xcassets */; };
 		5D7E35B62A0A84CB00AB3BE9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D7E35B52A0A84CB00AB3BE9 /* Preview Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		5D35956A2A0FF6FF0093C89D /* circle-loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "circle-loading.json"; sourceTree = "<group>"; };
 		5D5B27B72A12922500EA6BC9 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5D71B7DC2A0B90A700BE8DA7 /* Phosphate.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phosphate.ttc; sourceTree = "<group>"; };
+		5D7D881C2A21DD4E002EB03D /* WalletActivities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletActivities.swift; sourceTree = "<group>"; };
 		5D7E35AB2A0A84C700AB3BE9 /* ChinChin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChinChin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D7E35AE2A0A84C700AB3BE9 /* ChinChinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChinChinApp.swift; sourceTree = "<group>"; };
 		5D7E35B22A0A84CB00AB3BE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				8EC9DA772A1EFC8B00C99083 /* ProfileView.swift */,
+				5D7D881C2A21DD4E002EB03D /* WalletActivities.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				8EC9DA782A1EFC8B00C99083 /* ProfileView.swift in Sources */,
 				5D3595662A0FDD5F0093C89D /* SignUpView.swift in Sources */,
 				5D8EF6A32A1125900000B894 /* NavigationBar.swift in Sources */,
+				5D7D881D2A21DD4E002EB03D /* WalletActivities.swift in Sources */,
 				5D7E92A22A10BE3600069E06 /* WelcomView.swift in Sources */,
 				5D8EF6A12A1124630000B894 /* DiscoverView.swift in Sources */,
 				5D7E35AF2A0A84C700AB3BE9 /* ChinChinApp.swift in Sources */,

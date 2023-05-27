@@ -8,17 +8,54 @@
 import SwiftUI
 
 struct ProfileView: View {
+    let tabItems = ["Timeline", "Wallet", "Collectibles", "VC", "Like"]
+    
+    // MARK: state
+    @State var tabChoose = "Wallet"
+    @State var tabSelected = 1
     
 }
 
 extension ProfileView {
     var body: some View {
-        ScrollView(.vertical) {
-            profile
-            activities
+//        ScrollView(.vertical) {
+//            //profile
+//            activities
+//        }
+//        .background(.black)
+
+        ZStack {
+            GeometryReader { proxy in
+                TabView (selection: $tabSelected){
+                            profile
+                            .rotationEffect(.degrees(-90)) // Rotate content
+                            .frame(
+                                width: proxy.size.width,
+                                height: proxy.size.height
+                            )
+                            .tag(1)
+                            activities
+                            .rotationEffect(.degrees(-90)) // Rotate content
+                            .frame(
+                                width: proxy.size.width,
+                                height: proxy.size.height
+                            )
+                            .tag(2)
+                        }
+                        .frame(
+                            width: proxy.size.height, // Height & width swap
+                            height: proxy.size.width
+                        )
+                        .rotationEffect(.degrees(90), anchor: .topLeading) // Rotate TabView
+                        .offset(x: proxy.size.width) // Offset back into screens bounds
+                        .tabViewStyle(
+                            PageTabViewStyle(indexDisplayMode: .never)
+                        )
+                    }
         }
-        .edgesIgnoringSafeArea(.top)
-        .background(.gray)
+        .background(.black)
+
+            
     }
 }
 extension ProfileView {
@@ -39,7 +76,7 @@ extension ProfileView {
                 .fontWeight(.regular)
         }
     }
-    func textIcon(img: String, text: String) -> some View {
+    func textIcon(img: String, text: String, paddingLead: Double, paddingTrail: Double) -> some View {
         HStack {
             Image(img)
                 .resizable()
@@ -48,22 +85,12 @@ extension ProfileView {
             Text(text)
              .font(.sfProDisplayBold(size: 13))                .foregroundStyle(LinearGradient(colors: [Color("pink1"), Color("blue1")], startPoint: .top, endPoint: .bottom))
         }
-        .frame(width: 130, height: 28)
-        .padding(.vertical, 4)
+        .padding(.vertical, 5)
+//        .padding(.horizontal, 12)
+        .padding(.leading, paddingLead)
+        .padding(.trailing, paddingTrail)
         .background(Color("profile"))
         .cornerRadius(115)
-    }
-    func hederActivity(img: String, text: String, text1: String) -> some View {
-        HStack(spacing: 4) {
-            Image(img)
-                .resizable()
-                .frame(width: 14, height: 14)
-                .mask(Circle())
-            Text(text)
-                .font(.sfProDisplayBold(size: 12))             .foregroundColor(.white)
-            Text(text1)
-                .font(.sfProDisplayBold(size: 15))             .foregroundColor(.gray).opacity(0.5)
-        }
     }
 }
 
@@ -81,7 +108,7 @@ extension ProfileView {
             .padding(.vertical, 4)
             .background(.gray.opacity(0.36))
             .cornerRadius(24)
-            .padding(.leading, -20)
+            //.padding(.leading, -20)
             Spacer()
             HStack(spacing: 7) {
                 Text("Edit Profile")
@@ -99,107 +126,102 @@ extension ProfileView {
                     .background(.gray.opacity(0.36))
                     .mask(Circle())
             }
-            .padding(.trailing, -20)
+            //.padding(.trailing, -20)
         }
     }
     var content: some View {
         ZStack {
-            VStack(spacing: 35) {
-              //  Spacer(minLength: 150)
+            VStack(spacing: 25) {
                 Spacer(minLength: 150)
+                //Spacer()
                 VStack(spacing: 20) {
                     VStack(spacing: 10) {
-                        HStack(spacing: 3) {
+                        HStack(spacing: 7.5) {
                             Text("Donald Minion")
+                        
                                 .foregroundColor(.white)
                                 .font(.SFProDisplay(size: 26))
+                           
                             Image("protect")
                         }
-                        VStack(spacing: 15) {
-                            Image("Group1")
-                                .resizable()
-                                .frame(width: 171, height: 19)
-                                .padding(.leading, -15)
-                            HStack(spacing: 7) {
-                               textIcon(img: "green", text: "yozixyz.lens")
-                                HStack {
-                                    Image("house")
-                                        .resizable()
-                                        .frame(width: 18, height: 18)
-                                        .mask(Circle())
-                            Text("yozixyz")
-                             .font(.sfProDisplayBold(size: 13))
-                             .foregroundStyle(LinearGradient(colors: [Color("pink1"), Color("blue1")], startPoint: .top, endPoint: .bottom))
-                                }
-                                .frame(width: 87, height: 28)
-                                .padding(.vertical, 4)
-                                .background(Color("profile"))
-                                .cornerRadius(24)
-                                   // .frame(width: 110, height: 35)
-                                textIcon(img: "blue", text: "yozixyz.eth")
-                            }
+                        .padding(.leading, 30)
+                        Image("Group1")
+                            .resizable()
+                            .frame(width: 171, height: 19)
+//                                .padding(.leading, -15)
+                        HStack(spacing: 5) {
+                           textIcon(img: "green", text: "yozixyz.lens", paddingLead: 15, paddingTrail: 12)
+                            textIcon(img: "house", text: "yozixyz", paddingLead: 9, paddingTrail: 9)
+//
+                            textIcon(img: "blue", text: "yozixyz.eth", paddingLead: 17, paddingTrail: 16)
                         }
+                        .padding(.leading, 5)
                     }
-                    VStack(alignment: .leading, spacing: 10) {
+                    VStack(alignment: .leading, spacing: 6) {
                     Text("LIFETIME PREMIUM SNAPCHAT‼️ Content of ALL genres🥵 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 🎉")
-                        .frame(width: 320)
-                        .padding(.horizontal, 50)
-                            .font(.system(size: 11))
+//                        .frame(width: 320)
+//                        .padding(.horizontal, 50)
+                            .font(.system(size: 12.3))
                            // .font(.system(size: 11))
                         .foregroundColor(.gray.opacity(0.53))
                     Text("timelesswallet.xyz")
-                        .padding(.horizontal, 50)
-                        .font(.system(size: 12))
+//                        .padding(.horizontal, 50)
+                            .font(.system(size: 12))
                         .foregroundColor(Color("pink"))
-                        .frame(maxWidth: .infinity, alignment: .leading)
+//                        .frame(maxWidth: .infinity, alignment: .leading)
                     }
+                    .padding(.horizontal, 40)
                 }
                 button
                 Spacer()
+                  
             }
         }
-        .frame(maxWidth: .infinity, maxHeight: UIScreen.main.bounds.height / 1.5)
+        .frame(maxWidth: .infinity)
         .background(.linearGradient(Gradient(colors: [Color.white.opacity(0), .black.opacity(0.7), .black.opacity(1), Color("profile")]), startPoint: .top, endPoint: .bottom))
     }
     var button: some View {
-        HStack {
+        HStack(spacing: 16) {
             HStack {
                 Image("snow")
                     .foregroundColor(.white)
-                    .frame(width: 14, height: 14)
+                    .frame(width: 9, height: 9)
                 Text("Follow")
                     .font(.system(size: 12))
                     .foregroundColor(.white)
             }
-            .frame(width: 263, height: 30)
-            .padding(.horizontal, 8)
-            .padding(.vertical, 4)
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 8)
+//            .padding(.vertical, 4)
             .background(Color("profile").opacity(0.5))
             .cornerRadius(15)
             Image(systemName: "chevron.down")
                 .foregroundColor(.white)
-                .padding(.horizontal, 8)
                 .font(.sfProDisplayBold(size: 14))
-                .padding(.vertical, 4)
-                .frame(width: 38, height: 35)
+                .padding(8)
                 .background(Color("profile").opacity(0.5))
                 .cornerRadius(15)
+                .onTapGesture {
+                    self.tabSelected = 2
+                }
         }
-        .frame(width: 317, height: 28)
+        .frame(maxWidth: .infinity)
+        .padding(.leading, 35)
+        .padding(.trailing, 23)
     }
     var profile: some View {
-        ZStack {
+        ZStack(alignment: .top) {
             Image("Bitmap")
                .resizable()
-                .padding(.top, -60)
+               // .padding(.top, -60)
                 .scaledToFit()
                // .aspectRatio(0.6, contentMode: .fit)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+               
             VStack {
                 // status bar
-                Spacer(minLength: 48)
+                //Spacer(minLength: 48)
                 heder
-                    .padding(.horizontal, 50)
+                    .padding(.horizontal, 26)
                     .padding(.top, 15)
                     .padding(.bottom, 17)
                 HStack {
@@ -210,105 +232,55 @@ extension ProfileView {
                     }
                 }
                 .padding(.trailing, 15)
-                .padding(.top, -5)
-                Spacer(minLength: 70)
+//                .padding(.top, -5)
+                Spacer(minLength: 75)
                 content
             }
 
         }
-        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height )
+//        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 49)
         .background(.black)
     }
-    var buttonActiovities: some View {
-        HStack {
-            Image("Group7")
-                .resizable()
-                .foregroundColor(.white)
-                .frame(width: 23, height: 23)
-                .cornerRadius(6)
-            Text("Stand with Crypto")
-                .font(.SFProDisplay(size: 16))
-                .foregroundColor(.white)
-            Spacer()
-            Image(systemName: "chevron.down")
-                .foregroundColor(.white)
-        }
-        .padding()
-        .frame(width: .infinity, height: 30)
-        .padding(.horizontal, 8)
-        .padding(.vertical, 4)
-        .background(.gray.opacity(0.1))
-        .cornerRadius(15)
+    func tabBarItem(_ text: String, _ selected: Bool = false) -> some View {
+        Text(text)
+            .font(.system(size: 18))
+            .fontWeight(.bold)
+            .foregroundColor(selected ? .white : .gray)
     }
-    var futureActiovities: some View {
-        VStack(alignment: .leading) {
-            Spacer()
-            HStack(alignment: .top) {
-                Image("Gruop11")
-                    .resizable()
-                    .frame(width: 32, height: 28)
-                VStack(alignment: .leading) {
-                    HStack {
-                            Text("Receive")
-                            .foregroundColor(.white)
-                        Spacer()
-                            Text("+ 500 AAVE")
+    var tabBar: some View {
+        VStack(spacing: 20) {
+            ZStack {
+            }
+            .frame(width: UIScreen.main.bounds.width ,height: 12)
+            .background(Color("profile"))
+            ScrollView(.horizontal) {
+                HStack(spacing: 33) {
+                    ForEach(self.tabItems, id: \.self) { value in
+                        tabBarItem(value, self.tabChoose == value)
+                            .onTapGesture {
+                                self.tabChoose = value
+                            }
                     }
-                    .font(.system(size: 15))
-                    hederActivity(img: "Group14", text: "", text1: "0x453f...234e2")
-                    hederActivity(img: "Group13", text: "standwithcrypto.eth", text1: ". creator")
-               
-                   
-                        
                 }
             }
         }
+//        .frame(width: UIScreen.main.bounds.width)
     }
     var activities: some View {
         VStack {
-            VStack(alignment: .leading) {
-                Spacer()
-                Text("Wallet Activities")
-                    .font(.SFProTextMedium(size: 18))
-                    .foregroundColor(.white)
-                HStack(alignment: .top) {
-                    Image("Group20")
-                        .resizable()
-                        .frame(width: 32, height: 28)
-                    VStack(alignment: .leading) {
-                        HStack {
-                                Text("Minted NFT")
-                                 .foregroundColor(.white)
-                                Text(".")
-                                 .foregroundColor(.white.opacity(0.5))
-                                Text("15h ago")
-                                 .foregroundColor(.white.opacity(0.5))
-                            Spacer()
-                                Image(systemName: "ellipsis")
-                                 .foregroundColor(.white)
-                        }
-                        .font(.system(size: 15))
-                        hederActivity(img: "Group14", text: "", text1: "0x453f...234e2")
-                        hederActivity(img: "Group13", text: "standwithcrypto.eth", text1: ". creator")
-                        buttonActiovities
-                        Image("Group7")
-                            .resizable()
-                            .frame(width: 360, height: 350)
-                            .cornerRadius(15)
-                        futureActiovities
-                            
-                    }
-                }
-            }
-            .padding()
-            .frame(maxWidth: .infinity, alignment: .leading )
-            .background(Color("profile"))
+            tabBar
+            WalletActivities()
         }
     }
 }
-
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView()
     }
 }
+
+//extension Double {
+//    var spSize: Double {
+//        self * (UIScreen.main.bounds.width / 3) / 100
+//    }
+//}
