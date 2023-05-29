@@ -6,8 +6,11 @@
 	<array>
 		<string>Phosphate.ttc</string>
 		<string>SFProText-Medium.ttf</string>
+		<string>SFProText-Semibold.ttf</string>
 		<string>SFProDisplay-Black.ttf</string>
+		<string>SFProDisplay-Regular.ttf</string>
 		<string>SFProDisplay-Bold.ttf</string>
+		<string>SFProDisplay-Heavy.ttf</string>
 	</array>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleLightContent</string>

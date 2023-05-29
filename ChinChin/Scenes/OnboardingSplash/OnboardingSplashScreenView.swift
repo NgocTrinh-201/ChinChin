@@ -47,7 +47,6 @@ struct OnboardingSplashScreenView: View {
                 .transition(.move(edge: .bottom))
             }
         }
-        
     }
 }
 
@@ -92,6 +91,9 @@ extension Font {
         public static let Phosphate = "Phosphate"
         public static let SFProDisplay = "SFProDisplay-Black"
         public static let SFProTextMedium = "SFProText-Medium"
+        public static let SFProTextSemibold = "SFProText-Semibold"
+        public static let SFProDisplayRegular = "SFProDisplay-Regular"
+        public static let SFProDisplayHeavy = "SFProDisplay-Heavy"
     }
 }
 public extension Font {
@@ -106,6 +108,15 @@ public extension Font {
     }
     static func SFProTextMedium(size: CGFloat) -> Font {
         return Font.custom(Name.SFProTextMedium, size: size)
+    }
+    static func SFProTextSemibold(size: CGFloat) -> Font {
+        return Font.custom(Name.SFProTextSemibold, size: size)
+    }
+    static func SFProDisplayRegular(size: CGFloat) -> Font {
+        return Font.custom(Name.SFProDisplayRegular, size: size)
+    }
+    static func SFProDisplayHeavy(size: CGFloat) -> Font {
+        return Font.custom(Name.SFProDisplayHeavy, size: size)
     }
 }
 

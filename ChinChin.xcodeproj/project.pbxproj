@@ -33,6 +33,10 @@
 		8E0611D42A11D62400AE7B20 /* Discover.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E0611D32A11D62400AE7B20 /* Discover.json */; };
 		8E0611D62A11D6B300AE7B20 /* overViewLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E0611D52A11D6B300AE7B20 /* overViewLottie.json */; };
 		8E0611D82A11D7C000AE7B20 /* 77631-bee-lounging.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8E0611D72A11D7C000AE7B20 /* 77631-bee-lounging.mp4 */; };
+		8E1A476A2A24584B00785C54 /* SFProText-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E1A47692A24584B00785C54 /* SFProText-Medium.ttf */; };
+		8E1A476C2A2459DF00785C54 /* SFProDisplay-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E1A476B2A2459DF00785C54 /* SFProDisplay-Heavy.ttf */; };
+		8E1A476E2A2459E700785C54 /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E1A476D2A2459E700785C54 /* SFProDisplay-Regular.ttf */; };
+		8E1A47702A245A0900785C54 /* SFProText-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E1A476F2A245A0900785C54 /* SFProText-Semibold.ttf */; };
 		8E984FBA2A0B4D18007EE865 /* dna3_dance.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8E984FB92A0B4D00007EE865 /* dna3_dance.mp4 */; };
 		8E984FC72A0B8456007EE865 /* giphy360p.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8E984FC92A0B8456007EE865 /* giphy360p.mp4 */; };
 		8EC9DA752A1DB08B00C99083 /* TimelessOGNFT (video-converter.com).mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8EC9DA742A1DB08B00C99083 /* TimelessOGNFT (video-converter.com).mp4 */; };
@@ -44,7 +48,6 @@
 		8EC9DA822A1F017800C99083 /* protect.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EC9DA812A1F017800C99083 /* protect.png */; };
 		8EC9DA842A1F01B900C99083 /* Group1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EC9DA832A1F01B900C99083 /* Group1.png */; };
 		8EC9DA862A1F478F00C99083 /* SFProDisplay-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8EC9DA852A1F478F00C99083 /* SFProDisplay-Black.ttf */; };
-		8EC9DA882A1F4B2800C99083 /* SFProText-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8EC9DA872A1F4B2800C99083 /* SFProText-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +74,10 @@
 		8E0611D32A11D62400AE7B20 /* Discover.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Discover.json; sourceTree = "<group>"; };
 		8E0611D52A11D6B300AE7B20 /* overViewLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = overViewLottie.json; sourceTree = "<group>"; };
 		8E0611D72A11D7C000AE7B20 /* 77631-bee-lounging.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "77631-bee-lounging.mp4"; sourceTree = "<group>"; };
+		8E1A47692A24584B00785C54 /* SFProText-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SFProText-Medium.ttf"; path = "../../../../timeless-wallet/Timeless-wallet/Resources/Fonts/SFProText-Medium.ttf"; sourceTree = "<group>"; };
+		8E1A476B2A2459DF00785C54 /* SFProDisplay-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Heavy.ttf"; sourceTree = "<group>"; };
+		8E1A476D2A2459E700785C54 /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		8E1A476F2A245A0900785C54 /* SFProText-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Semibold.ttf"; sourceTree = "<group>"; };
 		8E984FB92A0B4D00007EE865 /* dna3_dance.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = dna3_dance.mp4; sourceTree = "<group>"; };
 		8E984FC32A0B5830007EE865 /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		8E984FC42A0B58C1007EE865 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -85,7 +92,6 @@
 		8EC9DA812A1F017800C99083 /* protect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = protect.png; sourceTree = "<group>"; };
 		8EC9DA832A1F01B900C99083 /* Group1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Group1.png; sourceTree = "<group>"; };
 		8EC9DA852A1F478F00C99083 /* SFProDisplay-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Black.ttf"; sourceTree = "<group>"; };
-		8EC9DA872A1F4B2800C99083 /* SFProText-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +124,10 @@
 		5D35955A2A0FCB7C0093C89D /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				8EC9DA872A1F4B2800C99083 /* SFProText-Medium.ttf */,
+				8E1A476F2A245A0900785C54 /* SFProText-Semibold.ttf */,
+				8E1A476D2A2459E700785C54 /* SFProDisplay-Regular.ttf */,
+				8E1A476B2A2459DF00785C54 /* SFProDisplay-Heavy.ttf */,
+				8E1A47692A24584B00785C54 /* SFProText-Medium.ttf */,
 				8EC9DA852A1F478F00C99083 /* SFProDisplay-Black.ttf */,
 				8E984FC32A0B5830007EE865 /* SFProDisplay-Bold.ttf */,
 				5D71B7DC2A0B90A700BE8DA7 /* Phosphate.ttc */,
@@ -348,19 +357,22 @@
 				8E0611D82A11D7C000AE7B20 /* 77631-bee-lounging.mp4 in Resources */,
 				5D5E4C942A0E923700290672 /* Phosphate.ttc in Resources */,
 				8EC9DA802A1F002F00C99083 /* snow.png in Resources */,
-				8EC9DA882A1F4B2800C99083 /* SFProText-Medium.ttf in Resources */,
+				8E1A476E2A2459E700785C54 /* SFProDisplay-Regular.ttf in Resources */,
 				8EC9DA842A1F01B900C99083 /* Group1.png in Resources */,
 				8E0611D22A11D1CE00AE7B20 /* walkthroughIntro (video-converter.com).mp4 in Resources */,
 				5D7E929F2A10BA7600069E06 /* confirmation-loading.json in Resources */,
 				8E0611D62A11D6B300AE7B20 /* overViewLottie.json in Resources */,
+				8E1A476A2A24584B00785C54 /* SFProText-Medium.ttf in Resources */,
 				5D71B7D72A0B8E6F00BE8DA7 /* SFProDisplay-Bold.ttf in Resources */,
 				8E984FBA2A0B4D18007EE865 /* dna3_dance.mp4 in Resources */,
 				5D35956B2A0FF6FF0093C89D /* circle-loading.json in Resources */,
 				8E0611D42A11D62400AE7B20 /* Discover.json in Resources */,
+				8E1A476C2A2459DF00785C54 /* SFProDisplay-Heavy.ttf in Resources */,
 				8E0611D02A11D13500AE7B20 /* splash (video-converter.com).mp4 in Resources */,
 				5D7E35B62A0A84CB00AB3BE9 /* Preview Assets.xcassets in Resources */,
 				8EC9DA7A2A1EFD5400C99083 /* Bitmap.png in Resources */,
 				8E984FC72A0B8456007EE865 /* giphy360p.mp4 in Resources */,
+				8E1A47702A245A0900785C54 /* SFProText-Semibold.ttf in Resources */,
 				8EC9DA7C2A1EFD5B00C99083 /* Bitmap2.png in Resources */,
 				8EC9DA822A1F017800C99083 /* protect.png in Resources */,
 				8EC9DA862A1F478F00C99083 /* SFProDisplay-Black.ttf in Resources */,

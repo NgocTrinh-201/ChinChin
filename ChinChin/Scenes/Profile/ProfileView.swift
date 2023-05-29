@@ -9,24 +9,16 @@ import SwiftUI
 
 struct ProfileView: View {
     let tabItems = ["Timeline", "Wallet", "Collectibles", "VC", "Like"]
-    
     // MARK: state
     @State var tabChoose = "Wallet"
     @State var tabSelected = 1
-    
 }
 
 extension ProfileView {
     var body: some View {
-//        ScrollView(.vertical) {
-//            //profile
-//            activities
-//        }
-//        .background(.black)
-
         ZStack {
             GeometryReader { proxy in
-                TabView (selection: $tabSelected){
+                TabView(selection: $tabSelected) {
                             profile
                             .rotationEffect(.degrees(-90)) // Rotate content
                             .frame(
@@ -54,8 +46,6 @@ extension ProfileView {
                     }
         }
         .background(.black)
-
-            
     }
 }
 extension ProfileView {
@@ -63,15 +53,14 @@ extension ProfileView {
         VStack(spacing: 2) {
             Image(img)
                 .resizable()
-               // .font(.SFProDisplay(size: 20))
                 .foregroundColor(.white)
-                .frame(maxWidth: 21, maxHeight: 19)
+                .frame(maxWidth: 19, maxHeight: 19)
             Text(text)
-                .font(.SFProDisplay(size: 16))
+                .font(.SFProDisplayRegular(size: 16))
                 .foregroundColor(.white)
                 .fontWeight(.bold)
             Text(text2)
-                .font(.sfProDisplayBold(size: 16))
+                .font(.SFProDisplayRegular(size: 16))
                 .foregroundColor(.gray.opacity(0.36))
                 .fontWeight(.regular)
         }
@@ -83,10 +72,12 @@ extension ProfileView {
                 .frame(width: 18, height: 18)
                 .mask(Circle())
             Text(text)
-             .font(.sfProDisplayBold(size: 13))                .foregroundStyle(LinearGradient(colors: [Color("pink1"), Color("blue1")], startPoint: .top, endPoint: .bottom))
+                .font(.SFProTextMedium(size: 13))
+                .foregroundStyle(LinearGradient(colors: [Color("pink1"), Color("blue1")], startPoint: .top, endPoint: .bottom))
         }
+        .frame(height: 28)
         .padding(.vertical, 5)
-//        .padding(.horizontal, 12)
+        .padding(.horizontal, 3)
         .padding(.leading, paddingLead)
         .padding(.trailing, paddingTrail)
         .background(Color("profile"))
@@ -105,10 +96,10 @@ extension ProfileView {
                     .foregroundColor(.white)
             }
             .padding(.horizontal, 8)
-            .padding(.vertical, 4)
+            .padding(.vertical, 6)
             .background(.gray.opacity(0.36))
             .cornerRadius(24)
-            //.padding(.leading, -20)
+            .padding(.leading, 10)
             Spacer()
             HStack(spacing: 7) {
                 Text("Edit Profile")
@@ -126,55 +117,44 @@ extension ProfileView {
                     .background(.gray.opacity(0.36))
                     .mask(Circle())
             }
-            //.padding(.trailing, -20)
         }
     }
     var content: some View {
         ZStack {
-            VStack(spacing: 25) {
-                Spacer(minLength: 150)
-                //Spacer()
-                VStack(spacing: 20) {
-                    VStack(spacing: 10) {
-                        HStack(spacing: 7.5) {
-                            Text("Donald Minion")
-                        
-                                .foregroundColor(.white)
-                                .font(.SFProDisplay(size: 26))
-                           
-                            Image("protect")
+            VStack(spacing: 45) {
+              Spacer(minLength: 70)
+               Spacer()
+                    VStack(spacing: 20) {
+                        VStack(spacing: 10) {
+                            HStack(spacing: 7.5) {
+                                Text("Donald Minion")
+                                    .foregroundColor(.white)
+                                    .font(.SFProDisplayHeavy(size: 26))
+                                Image("protect")
+                            }
+                            .padding(.leading, 30)
+                            Image("Group1")
+                                .resizable()
+                                .frame(width: 171, height: 19)
+                            HStack(spacing: 5) {
+                               textIcon(img: "green", text: "yozixyz.lens", paddingLead: 15, paddingTrail: 12)
+                                textIcon(img: "house", text: "yozixyz", paddingLead: 9, paddingTrail: 9)
+                                textIcon(img: "blue", text: "yozixyz.eth", paddingLead: 17, paddingTrail: 16)
+                            }
+                            .padding(.leading, 5)
                         }
-                        .padding(.leading, 30)
-                        Image("Group1")
-                            .resizable()
-                            .frame(width: 171, height: 19)
-//                                .padding(.leading, -15)
-                        HStack(spacing: 5) {
-                           textIcon(img: "green", text: "yozixyz.lens", paddingLead: 15, paddingTrail: 12)
-                            textIcon(img: "house", text: "yozixyz", paddingLead: 9, paddingTrail: 9)
-//
-                            textIcon(img: "blue", text: "yozixyz.eth", paddingLead: 17, paddingTrail: 16)
-                        }
-                        .padding(.leading, 5)
+                            VStack(alignment: .leading, spacing: 10) {
+                                Text("LIFETIME PREMIUM SNAPCHAT‼️ Content of ALL genres🥵 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 🎉")
+                                    .font(.system(size: 12.5))
+                                    .foregroundColor(.gray.opacity(0.53))
+                                Text("timelesswallet.xyz")
+                                    .font(.SFProDisplayRegular(size: 12))
+                                    .foregroundColor(Color("pink"))
+                            }
+                            .padding(.horizontal, 40)
                     }
-                    VStack(alignment: .leading, spacing: 6) {
-                    Text("LIFETIME PREMIUM SNAPCHAT‼️ Content of ALL genres🥵 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 🎉")
-//                        .frame(width: 320)
-//                        .padding(.horizontal, 50)
-                            .font(.system(size: 12.3))
-                           // .font(.system(size: 11))
-                        .foregroundColor(.gray.opacity(0.53))
-                    Text("timelesswallet.xyz")
-//                        .padding(.horizontal, 50)
-                            .font(.system(size: 12))
-                        .foregroundColor(Color("pink"))
-//                        .frame(maxWidth: .infinity, alignment: .leading)
-                    }
-                    .padding(.horizontal, 40)
-                }
                 button
                 Spacer()
-                  
             }
         }
         .frame(maxWidth: .infinity)
@@ -183,27 +163,30 @@ extension ProfileView {
     var button: some View {
         HStack(spacing: 16) {
             HStack {
-                Image("snow")
+                Image("snow 1")
                     .foregroundColor(.white)
-                    .frame(width: 9, height: 9)
+                    .frame(width: 14, height: 14)
                 Text("Follow")
-                    .font(.system(size: 12))
+                    .font(.SFProDisplayRegular(size: 12))
                     .foregroundColor(.white)
             }
-            .frame(maxWidth: .infinity)
+            .frame(maxWidth: .infinity, maxHeight: 28)
             .padding(.vertical, 8)
-//            .padding(.vertical, 4)
             .background(Color("profile").opacity(0.5))
             .cornerRadius(15)
-            Image(systemName: "chevron.down")
-                .foregroundColor(.white)
-                .font(.sfProDisplayBold(size: 14))
-                .padding(8)
-                .background(Color("profile").opacity(0.5))
-                .cornerRadius(15)
-                .onTapGesture {
-                    self.tabSelected = 2
-                }
+            HStack {
+                Image(systemName: "chevron.down")
+                    .frame(width: 10, height: 5)
+                    .onTapGesture {
+                        self.tabSelected = 2
+                    }
+            }
+            .frame(maxWidth: 30, maxHeight: 20)
+            .foregroundColor(.white)
+            .font(.sfProDisplayBold(size: 14))
+            .padding(8)
+            .background(Color("profile").opacity(0.5))
+            .cornerRadius(15)
         }
         .frame(maxWidth: .infinity)
         .padding(.leading, 35)
@@ -213,13 +196,8 @@ extension ProfileView {
         ZStack(alignment: .top) {
             Image("Bitmap")
                .resizable()
-               // .padding(.top, -60)
-                .scaledToFit()
-               // .aspectRatio(0.6, contentMode: .fit)
-               
+               .scaledToFit()
             VStack {
-                // status bar
-                //Spacer(minLength: 48)
                 heder
                     .padding(.horizontal, 26)
                     .padding(.top, 15)
@@ -228,30 +206,35 @@ extension ProfileView {
                     Spacer()
                     VStack(spacing: 18) {
                         hederIcon(img: "cat", text: "7", text2: "Flower")
-                        hederIcon(img: "snow", text: "22", text2: "Flowings")
+                        hederIcon(img: "snow 1", text: "22", text2: "Flowings")
                     }
                 }
-                .padding(.trailing, 15)
-//                .padding(.top, -5)
+                .padding(.trailing, 14)
                 Spacer(minLength: 75)
                 content
             }
 
         }
-//        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 49)
         .background(.black)
     }
     func tabBarItem(_ text: String, _ selected: Bool = false) -> some View {
-        Text(text)
-            .font(.system(size: 18))
-            .fontWeight(.bold)
-            .foregroundColor(selected ? .white : .gray)
+        VStack(spacing: 0) {
+            Text(text)
+                .font(.SFProDisplayRegular(size: 16))
+                .fontWeight(.bold)
+                .foregroundColor(selected ? .white : .gray)
+            if selected {
+                Color.white
+                .frame(width: 50, height: 2)
+                .clipShape(Capsule())
+            }
+        }
     }
     var tabBar: some View {
         VStack(spacing: 20) {
             ZStack {
             }
-            .frame(width: UIScreen.main.bounds.width ,height: 12)
+            .frame(width: UIScreen.main.bounds.width, height: 12)
             .background(Color("profile"))
             ScrollView(.horizontal) {
                 HStack(spacing: 33) {
@@ -264,7 +247,7 @@ extension ProfileView {
                 }
             }
         }
-//        .frame(width: UIScreen.main.bounds.width)
+        .frame(width: UIScreen.main.bounds.width)
     }
     var activities: some View {
         VStack {
@@ -279,8 +262,8 @@ struct ProfileView_Previews: PreviewProvider {
     }
 }
 
-//extension Double {
+// extension Double {
 //    var spSize: Double {
 //        self * (UIScreen.main.bounds.width / 3) / 100
 //    }
-//}
+// }
