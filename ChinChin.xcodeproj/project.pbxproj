@@ -25,6 +25,7 @@
 		5D7E92A92A10DBE100069E06 /* Snappable in Frameworks */ = {isa = PBXBuildFile; productRef = 5D7E92A82A10DBE100069E06 /* Snappable */; };
 		5D7E92AC2A10E03E00069E06 /* CollectionViewPagingLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 5D7E92AB2A10E03E00069E06 /* CollectionViewPagingLayout */; };
 		5D7E92AF2A10EAC700069E06 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7E92AE2A10EAC700069E06 /* WalletView.swift */; };
+		5D887F342A247D81004CC7C9 /* ProfileView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D887F332A247D81004CC7C9 /* ProfileView2.swift */; };
 		5D8EF6A12A1124630000B894 /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8EF6A02A1124630000B894 /* DiscoverView.swift */; };
 		5D8EF6A32A1125900000B894 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8EF6A22A1125900000B894 /* NavigationBar.swift */; };
 		5D8EF6A52A1131ED0000B894 /* TimelessOGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8EF6A42A1131ED0000B894 /* TimelessOGView.swift */; };
@@ -66,6 +67,7 @@
 		5D7E929E2A10BA7600069E06 /* confirmation-loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "confirmation-loading.json"; sourceTree = "<group>"; };
 		5D7E92A12A10BE3600069E06 /* WelcomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomView.swift; sourceTree = "<group>"; };
 		5D7E92AE2A10EAC700069E06 /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
+		5D887F332A247D81004CC7C9 /* ProfileView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView2.swift; sourceTree = "<group>"; };
 		5D8EF6A02A1124630000B894 /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
 		5D8EF6A22A1125900000B894 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		5D8EF6A42A1131ED0000B894 /* TimelessOGView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelessOGView.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 			children = (
 				8EC9DA772A1EFC8B00C99083 /* ProfileView.swift */,
 				5D7D881C2A21DD4E002EB03D /* WalletActivities.swift */,
+				5D887F332A247D81004CC7C9 /* ProfileView2.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				8EC9DA782A1EFC8B00C99083 /* ProfileView.swift in Sources */,
 				5D3595662A0FDD5F0093C89D /* SignUpView.swift in Sources */,
 				5D8EF6A32A1125900000B894 /* NavigationBar.swift in Sources */,
+				5D887F342A247D81004CC7C9 /* ProfileView2.swift in Sources */,
 				5D7D881D2A21DD4E002EB03D /* WalletActivities.swift in Sources */,
 				5D7E92A22A10BE3600069E06 /* WelcomView.swift in Sources */,
 				5D8EF6A12A1124630000B894 /* DiscoverView.swift in Sources */,
@@ -562,7 +566,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ChinChin/Preview Content\"";
-				DEVELOPMENT_TEAM = 72P82X8MK6;
+				DEVELOPMENT_TEAM = D4U8K6KDST;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChinChin/Info.plist;
@@ -593,7 +597,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ChinChin/Preview Content\"";
-				DEVELOPMENT_TEAM = 72P82X8MK6;
+				DEVELOPMENT_TEAM = D4U8K6KDST;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChinChin/Info.plist;

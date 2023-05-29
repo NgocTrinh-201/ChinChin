@@ -225,7 +225,7 @@ extension ProfileView {
                 .foregroundColor(selected ? .white : .gray)
             if selected {
                 Color.white
-                .frame(width: 50, height: 2)
+                .frame( height: 2)
                 .clipShape(Capsule())
             }
         }
