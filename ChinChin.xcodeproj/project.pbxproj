@@ -13,6 +13,9 @@
 		5D3595692A0FF6AD0093C89D /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 5D3595682A0FF6AD0093C89D /* Lottie */; };
 		5D35956B2A0FF6FF0093C89D /* circle-loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D35956A2A0FF6FF0093C89D /* circle-loading.json */; };
 		5D5B27B82A12922500EA6BC9 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B27B72A12922500EA6BC9 /* SettingsView.swift */; };
+		5D5DEA862A262E67000C0019 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 5D5DEA852A262E67000C0019 /* SkeletonView */; };
+		5D5DEA892A263257000C0019 /* SkeletonUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5D5DEA882A263257000C0019 /* SkeletonUI */; };
+		5D5DEA8B2A2632E6000C0019 /* Skeleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5DEA8A2A2632E6000C0019 /* Skeleton.swift */; };
 		5D5E4C942A0E923700290672 /* Phosphate.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 5D71B7DC2A0B90A700BE8DA7 /* Phosphate.ttc */; };
 		5D71B7D72A0B8E6F00BE8DA7 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E984FC32A0B5830007EE865 /* SFProDisplay-Bold.ttf */; };
 		5D7D881D2A21DD4E002EB03D /* WalletActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7D881C2A21DD4E002EB03D /* WalletActivities.swift */; };
@@ -57,6 +60,7 @@
 		5D3595652A0FDD5F0093C89D /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		5D35956A2A0FF6FF0093C89D /* circle-loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "circle-loading.json"; sourceTree = "<group>"; };
 		5D5B27B72A12922500EA6BC9 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		5D5DEA8A2A2632E6000C0019 /* Skeleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skeleton.swift; sourceTree = "<group>"; };
 		5D71B7DC2A0B90A700BE8DA7 /* Phosphate.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phosphate.ttc; sourceTree = "<group>"; };
 		5D7D881C2A21DD4E002EB03D /* WalletActivities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletActivities.swift; sourceTree = "<group>"; };
 		5D7E35AB2A0A84C700AB3BE9 /* ChinChin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChinChin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +105,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D5DEA892A263257000C0019 /* SkeletonUI in Frameworks */,
+				5D5DEA862A262E67000C0019 /* SkeletonView in Frameworks */,
 				5D3595692A0FF6AD0093C89D /* Lottie in Frameworks */,
 				5D7E92A92A10DBE100069E06 /* Snappable in Frameworks */,
 				5D7E92AC2A10E03E00069E06 /* CollectionViewPagingLayout in Frameworks */,
@@ -281,6 +287,7 @@
 				8EC9DA772A1EFC8B00C99083 /* ProfileView.swift */,
 				5D7D881C2A21DD4E002EB03D /* WalletActivities.swift */,
 				5D887F332A247D81004CC7C9 /* ProfileView2.swift */,
+				5D5DEA8A2A2632E6000C0019 /* Skeleton.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -306,6 +313,8 @@
 				5D3595682A0FF6AD0093C89D /* Lottie */,
 				5D7E92A82A10DBE100069E06 /* Snappable */,
 				5D7E92AB2A10E03E00069E06 /* CollectionViewPagingLayout */,
+				5D5DEA852A262E67000C0019 /* SkeletonView */,
+				5D5DEA882A263257000C0019 /* SkeletonUI */,
 			);
 			productName = ChinChin;
 			productReference = 5D7E35AB2A0A84C700AB3BE9 /* ChinChin.app */;
@@ -342,6 +351,8 @@
 				5D3595672A0FF6AD0093C89D /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				5D7E92A72A10DBE100069E06 /* XCRemoteSwiftPackageReference "Snappable" */,
 				5D7E92AA2A10E03E00069E06 /* XCRemoteSwiftPackageReference "CollectionViewPagingLayout" */,
+				5D5DEA842A262E67000C0019 /* XCRemoteSwiftPackageReference "SkeletonView" */,
+				5D5DEA872A263257000C0019 /* XCRemoteSwiftPackageReference "SkeletonUI" */,
 			);
 			productRefGroup = 5D7E35AC2A0A84C700AB3BE9 /* Products */;
 			projectDirPath = "";
@@ -418,6 +429,7 @@
 				5D35955F2A0FCCB60093C89D /* OnboardingSplashScreenView.swift in Sources */,
 				8EC9DA782A1EFC8B00C99083 /* ProfileView.swift in Sources */,
 				5D3595662A0FDD5F0093C89D /* SignUpView.swift in Sources */,
+				5D5DEA8B2A2632E6000C0019 /* Skeleton.swift in Sources */,
 				5D8EF6A32A1125900000B894 /* NavigationBar.swift in Sources */,
 				5D887F342A247D81004CC7C9 /* ProfileView2.swift in Sources */,
 				5D7D881D2A21DD4E002EB03D /* WalletActivities.swift in Sources */,
@@ -652,6 +664,22 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		5D5DEA842A262E67000C0019 /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		5D5DEA872A263257000C0019 /* XCRemoteSwiftPackageReference "SkeletonUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CSolanaM/SkeletonUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		5D7E92A72A10DBE100069E06 /* XCRemoteSwiftPackageReference "Snappable" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hugehoge/Snappable";
@@ -675,6 +703,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5D3595672A0FF6AD0093C89D /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		5D5DEA852A262E67000C0019 /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D5DEA842A262E67000C0019 /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
+		};
+		5D5DEA882A263257000C0019 /* SkeletonUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D5DEA872A263257000C0019 /* XCRemoteSwiftPackageReference "SkeletonUI" */;
+			productName = SkeletonUI;
 		};
 		5D7E92A82A10DBE100069E06 /* Snappable */ = {
 			isa = XCSwiftPackageProductDependency;

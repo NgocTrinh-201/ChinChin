@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import SkeletonView
 
 struct WalletActivities: View {
     let filterItems = ["ALL", "RECEIVE", "SEND", "SWAP", "READ PACKET", "MINT NFT"]
     // MARK: State
     @State var filterChoose = "ALL"
+    @State var showSkeleton = true
 }
 // MARK: body
 extension WalletActivities {
@@ -33,6 +35,12 @@ extension WalletActivities {
         .padding(.top, 27)
         .frame(maxWidth: UIScreen.main.bounds.width, alignment: .leading)
         .background(Color("Background"))
+        // Edit
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                self.showSkeleton = false
+            }
+        }
     }
 }
 // MARK: subview
@@ -53,6 +61,8 @@ extension WalletActivities {
                         .stroke(Color("profile"), lineWidth: 2).padding(1)
                 }
             }
+        // Edit
+            .makeSkeleton(with: showSkeleton, cornerRadius: 10)
     }
     var filterBar: some View {
         ScrollView(.horizontal, showsIndicators: false) {
@@ -71,6 +81,7 @@ extension WalletActivities {
             Image("Group20")
                 .resizable()
                 .frame(width: 40, height: 40)
+                .makeSkeleton(with: showSkeleton, cornerRadius: 10)
             VStack(alignment: .leading, spacing: 12) {
                 VStack(alignment: .leading, spacing: 4) {
                     HStack(spacing: 5) {
@@ -86,6 +97,7 @@ extension WalletActivities {
                              .padding(.trailing, 27)
                     }
                     .font(.SFProDisplayRegular(size: 15))
+                    .makeSkeleton(with: showSkeleton, cornerRadius: 10)
                     HStack(spacing: 4) {
                         Image("Group14")
                             .resizable()
@@ -94,6 +106,7 @@ extension WalletActivities {
                         Text("0x453f...234e2")
                             .font(.SFProDisplayRegular(size: 15))   .foregroundColor(.gray).opacity(0.5)
                     }
+                    .makeSkeleton(with: showSkeleton, cornerRadius: 10)
                     HStack(spacing: 3) {
                         Image("Group13")
                             .resizable()
@@ -104,23 +117,28 @@ extension WalletActivities {
                         Text("· creator")
                             .font(.SFProDisplayRegular(size: 12))           .foregroundColor(.gray).opacity(0.5)
                     }
+                    .makeSkeleton(with: showSkeleton, cornerRadius: 10)
                 }
                 .padding(.leading, 4)
 //                Spacer()
                 buttonActiovities
                     .padding(.top, 3)
                     .padding(.trailing, 12)
+                    .makeSkeleton(with: showSkeleton)
 //                Spacer()
                 Image("Group7")
                     .resizable()
                     .aspectRatio(1, contentMode: .fit)
                     .cornerRadius(15)
                     .padding(.trailing, 12)
+                    .makeSkeleton(with: showSkeleton, cornerRadius: 15)
 //                Spacer()
 //                Spacer()
                 VStack(spacing: 26) {
                     futureActiovities
+                    
                     futureActiovities
+                       
                 }
                 .padding(.top, 25)
             }
@@ -156,6 +174,7 @@ extension WalletActivities {
                 Image("Gruop11")
                     .resizable()
                     .frame(width: 40, height: 40)
+                    .makeSkeleton(with: showSkeleton, cornerRadius: 20)
                 VStack(alignment: .leading, spacing: 4) {
                     VStack(spacing: 2) {
                         HStack {
@@ -188,7 +207,9 @@ extension WalletActivities {
                             .foregroundColor(.green)
                     }
                 }
+                .makeSkeleton(with: showSkeleton, cornerRadius: 10)
             }
+            
         }
         .padding(.trailing, 31)
         .padding(.leading, -30)

@@ -12,16 +12,24 @@ struct ProfileView2: View {
     let tabItems = ["Timeline", "Wallet", "Collectibles", "VC", "Like", "Timeline 1", "Wallet 1", "Collectibles 1", "VC 1", "Like 1"]
     @State var tabChoose = "Wallet"
 }
+//Edit
 //MARK: body
 extension ProfileView2 {
     var body: some View {
-        ZStack {
+        ZStack(alignment: .top) {
             ScrollView(.vertical, showsIndicators: false) {
                 profile
-                activities
+                //Edit
+                subView
             }
+            
+            .padding(.top, UIApplication.shared.statusBarFrame.size.height)
+            Color("Background")
+                .frame(width: UIScreen.main.bounds.width, height: UIApplication.shared.statusBarFrame.size.height)
+            
         }
         .background(Color("Background"))
+        .edgesIgnoringSafeArea(.top)
     }
 }
 
@@ -260,12 +268,17 @@ extension ProfileView2 {
         
     }
     
-    
-    var activities: some View {
-        VStack(spacing: 0) {
-            tabBar
-                .padding(.leading, 5)
-            WalletActivities()
+    //Edit
+    var subView: some View {
+        LazyVStack(spacing: 0, pinnedViews: [.sectionHeaders]) {
+            Section {
+                pages()
+            } header: {
+                tabBar
+                    .padding(.leading, 5)
+                    .background(Color("Background"))
+            }
+            
         }
         
     }
@@ -305,6 +318,19 @@ extension ProfileView2 {
 
 //MARK: computed func
 extension ProfileView2 {
+    
+    //Edit
+    func pages() -> some View {
+        ZStack {
+            switch(tabChoose) {
+            case "Wallet": WalletActivities()
+            case "Timeline": Skeleton()
+            default:
+                WalletActivities()
+            }
+        }
+    }
+    
     func hederIcon(img: String, text: String, text2: String) -> some View {
         VStack(spacing: 2) {
             Text(img)
