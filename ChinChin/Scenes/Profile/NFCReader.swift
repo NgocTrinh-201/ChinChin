@@ -8,39 +8,15 @@
 import SwiftUI
 import CoreNFC
 
-struct ViewNFC: View {
-    
-    @State var showSheet = false
+struct NFCReader: View {
+    @StateObject var data = Data.shared
     var body: some View {
         VStack {
-            
-            Button {
-                showSheet.toggle()
-            } label: {
-                Text("Click me")
-            }
-        }
-        .overlay(alignment: .bottom) {
-            if showSheet {
-                NFCReader()
-                    .onTapGesture {
-                        showSheet.toggle()
-                    }
-            }
+            Text("\(data.data)")
+            ScanButton()
+                .frame(height: 50)
         }
     }
-}
-
-struct NFCReader: UIViewControllerRepresentable {
-    func makeUIViewController(context: Context) -> NFCReaderm{
-        return NFCReaderm ()
-    }
-    
-    func updateUIViewController(_ uiViewController: NFCReaderm, context: Context) {
-        
-    }
-    
-    typealias UIViewControllerType = NFCReaderm
 }
 
 struct NFCReader_Previews: PreviewProvider {
@@ -49,52 +25,57 @@ struct NFCReader_Previews: PreviewProvider {
     }
 }
 
-struct NFCReaderView: View {
-    @StateObject var data = Data.shared
-    var body: some View {
-        VStack {
-            Text("\(data.data)")
+struct ScanButton: UIViewRepresentable {
+    func makeUIView(context: Context) -> UIButton {
+        let button = UIButton()
+        button.setTitle("Scan", for: .normal)
+        button.backgroundColor = UIColor.blue
+        button.addTarget(context.coordinator, action: #selector(context.coordinator.buttoClick(_:)), for: .touchUpInside)
+        return button
+    }
+    
+    func updateUIView(_ uiView: UIViewType, context: Context) {
+        
+    }
+    
+    func makeCoordinator() -> ScanButton.Coordinator {
+        return Coordinator()
+    }
+    
+    class Coordinator: NSObject, NFCNDEFReaderSessionDelegate {
+        let data = Data.shared
+        var session: NFCNDEFReaderSession?
+        
+        @objc func buttoClick(_ sender: Any) {
+            guard NFCNDEFReaderSession.readingAvailable else {
+                data.data = "dont supoort"
+                return
+            }
+            session = NFCNDEFReaderSession(delegate: self, queue: .main, invalidateAfterFirstRead: true)
+            session?.begin()
+        }
+        
+        func readerSession(_ session: NFCNDEFReaderSession, didInvalidateWithError error: Error) {
+            data.data = error.localizedDescription
+        }
+        
+        func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
+            guard let records = messages.first?.records.first else {
+                return
+            }
+            //
+            //check dieu kien
+            //mo app
+            data.data = records.description
         }
     }
-}
-
-class NFCReaderm:UIViewController, NFCNDEFReaderSessionDelegate {
-    var session: NFCNDEFReaderSession?
-    override func viewDidAppear(_ animated: Bool) {
-        session = NFCNDEFReaderSession.init(delegate: self, queue: nil, invalidateAfterFirstRead: true)
-        let hosting = UIHostingController(rootView: NFCReaderView())
-        hosting.view.translatesAutoresizingMaskIntoConstraints = false
-        hosting.view.frame = UIScreen.main.bounds
-        hosting.view.backgroundColor = .red
-        self.parent?.view.addSubview(hosting.view)
-        self.parent?.addChild(hosting)
-        session?.begin()
-        print("NFC being \(session)")
-    }
-    func readerSession(_ session: NFCNDEFReaderSession, didInvalidateWithError error: Error) {
-        print("NFC error \(error.localizedDescription)")
-        DispatchQueue.main.async{
-            Data.shared.data = error.localizedDescription
-        }
-    }
-    func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
-        var result = ""
-        for payload in messages[0].records {
-            result += payload.identifier.description
-        }
-        print(result)
-        DispatchQueue.main.async {
-            Data.shared.data = result
-        }
-    }
+    
 }
 
 class Data: ObservableObject {
-    @Published var data = "Bo the vao sau lung"
+    @Published var data = "No data"
     public func setData(_ data: String) {
         self.data = data
     }
-    
     static let shared = Data()
 }
-

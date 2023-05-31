@@ -11,7 +11,7 @@ import SwiftUI
 struct ChinChinApp: App {
     var body: some Scene {
         WindowGroup {
-            ViewNFC()
+            NFCReader()
         }
     }
 }
