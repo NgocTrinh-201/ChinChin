@@ -18,6 +18,7 @@
 		5D5DEA8B2A2632E6000C0019 /* Skeleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5DEA8A2A2632E6000C0019 /* Skeleton.swift */; };
 		5D5E4C942A0E923700290672 /* Phosphate.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 5D71B7DC2A0B90A700BE8DA7 /* Phosphate.ttc */; };
 		5D71B7D72A0B8E6F00BE8DA7 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E984FC32A0B5830007EE865 /* SFProDisplay-Bold.ttf */; };
+		5D74C3412A27183C0026A70F /* NFCReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D74C3402A27183C0026A70F /* NFCReader.swift */; };
 		5D7D881D2A21DD4E002EB03D /* WalletActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7D881C2A21DD4E002EB03D /* WalletActivities.swift */; };
 		5D7E35AF2A0A84C700AB3BE9 /* ChinChinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7E35AE2A0A84C700AB3BE9 /* ChinChinApp.swift */; };
 		5D7E35B32A0A84CB00AB3BE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D7E35B22A0A84CB00AB3BE9 /* Assets.xcassets */; };
@@ -62,6 +63,7 @@
 		5D5B27B72A12922500EA6BC9 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		5D5DEA8A2A2632E6000C0019 /* Skeleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skeleton.swift; sourceTree = "<group>"; };
 		5D71B7DC2A0B90A700BE8DA7 /* Phosphate.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phosphate.ttc; sourceTree = "<group>"; };
+		5D74C3402A27183C0026A70F /* NFCReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCReader.swift; sourceTree = "<group>"; };
 		5D7D881C2A21DD4E002EB03D /* WalletActivities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletActivities.swift; sourceTree = "<group>"; };
 		5D7E35AB2A0A84C700AB3BE9 /* ChinChin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChinChin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D7E35AE2A0A84C700AB3BE9 /* ChinChinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChinChinApp.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 				5D7D881C2A21DD4E002EB03D /* WalletActivities.swift */,
 				5D887F332A247D81004CC7C9 /* ProfileView2.swift */,
 				5D5DEA8A2A2632E6000C0019 /* Skeleton.swift */,
+				5D74C3402A27183C0026A70F /* NFCReader.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				5D8EF6A52A1131ED0000B894 /* TimelessOGView.swift in Sources */,
 				5D7E92AF2A10EAC700069E06 /* WalletView.swift in Sources */,
 				5D35955F2A0FCCB60093C89D /* OnboardingSplashScreenView.swift in Sources */,
+				5D74C3412A27183C0026A70F /* NFCReader.swift in Sources */,
 				8EC9DA782A1EFC8B00C99083 /* ProfileView.swift in Sources */,
 				5D3595662A0FDD5F0093C89D /* SignUpView.swift in Sources */,
 				5D5DEA8B2A2632E6000C0019 /* Skeleton.swift in Sources */,
